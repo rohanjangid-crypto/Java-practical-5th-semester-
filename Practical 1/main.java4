@@ -1,1 +1,49 @@
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
 
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+}
+
+class Employee {
+    double calculatePay() {
+        return 10000;
+    }
+}
+
+class Manager extends Employee {
+    double calculatePay() {
+        return 30000;
+    }
+}
+
+class Clerk extends Employee {
+    double calculatePay() {
+        return 15000;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+
+        System.out.println("Sum of two integers: " + c.add(10, 20));
+        System.out.println("Sum of three integers: " + c.add(10, 20, 30));
+        System.out.println("Sum of two doubles: " + c.add(5.5, 4.5));
+
+        Employee e;
+
+        e = new Manager();
+        System.out.println("Manager Pay: " + e.calculatePay());
+
+        e = new Clerk();
+        System.out.println("Clerk Pay: " + e.calculatePay());
+    }
+}                                                                                                                
