@@ -1,1 +1,79 @@
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle is starting");
+    }
+}
 
+class Car extends Vehicle {
+    void display() {
+        System.out.println("Car has four wheels");
+    }
+}
+
+class Person {
+    String name = "Rahul";
+
+    void showPerson() {
+        System.out.println("Name: " + name);
+    }
+}
+
+class Employee extends Person {
+    int id = 101;
+
+    void showEmployee() {
+        System.out.println("Employee ID: " + id);
+    }
+}
+
+class Manager extends Employee {
+    String department = "IT";
+
+    void showManager() {
+        System.out.println("Department: " + department);
+    }
+}
+
+class Shape {
+    void display() {
+        System.out.println("This is a shape");
+    }
+}
+
+class Circle extends Shape {
+    double radius = 5;
+
+    void area() {
+        System.out.println("Circle Area: " + (3.14 * radius * radius));
+    }
+}
+
+class Rectangle extends Shape {
+    int length = 4;
+    int breadth = 6;
+
+    void area() {
+        System.out.println("Rectangle Area: " + (length * breadth));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.start();
+        c.display();
+
+        Manager m = new Manager();
+        m.showPerson();
+        m.showEmployee();
+        m.showManager();
+
+        Circle ci = new Circle();
+        ci.display();
+        ci.area();
+
+        Rectangle r = new Rectangle();
+        r.display();
+        r.area();
+    }
+}
